@@ -15,8 +15,8 @@
 
         <TextBox x:Name="cihperTextBox" HorizontalAlignment="Left" Margin="234,461,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="140" Grid.ColumnSpan="2"/>
         <Label x:Name="finLabel" Content="Answer so far:" FontSize="25" HorizontalAlignment="Left" Margin="143,410,0,0" VerticalAlignment="Top" Height="46" RenderTransformOrigin="0.5,0.5" Width="238" Grid.ColumnSpan="2"></Label>
-        <Label x:Name="label1" Content="P[17]" FontSize="25" HorizontalAlignment="Left" Margin="354,146,0,0" VerticalAlignment="Top" Height="46" Width="72" Grid.Column="1"/>
-        <Label x:Name="label1_Copy" Content="P[16]" FontSize="25" HorizontalAlignment="Left" Margin="118,146,0,0" VerticalAlignment="Top" Height="50" Width="70"/>
+        <Label x:Name="p17label" Content="P[17]" FontSize="25" HorizontalAlignment="Left" Margin="354,146,0,0" VerticalAlignment="Top" Height="46" Width="72" Grid.Column="1"/>
+        <Label x:Name="p16label" Content="P[16]" FontSize="25" HorizontalAlignment="Left" Margin="118,146,0,0" VerticalAlignment="Top" Height="50" Width="70"/>
         <TextBlock x:Name="p16TextBlock" FontSize="15" Grid.Column="1" HorizontalAlignment="Left" Margin="363,215,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="96"/>
         <TextBlock x:Name="p17TextBlock" FontSize="15" HorizontalAlignment="Left" Margin="118,216,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="96"/>
         <Label x:Name="inputLeftLabel" Content="Label" HorizontalAlignment="Left" Margin="189,90,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="204" Height="25"/>

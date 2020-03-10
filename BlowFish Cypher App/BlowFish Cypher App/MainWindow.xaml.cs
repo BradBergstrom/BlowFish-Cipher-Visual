@@ -23,6 +23,7 @@ namespace BlowFish_Cypher_App
     {
         public static MainWindow me;
         public static BlowFish blowFish;
+        public static bool areKeysSetup;
 
         public static void setCipherText(string text)
         {
@@ -37,13 +38,14 @@ namespace BlowFish_Cypher_App
         {
             InitializeComponent();
             me = this;
+            areKeysSetup = false;
             blowFish = new BlowFish();
         }
 
         public void onGeneratePBox(object sender, RoutedEventArgs e)
         {
             //blowFish.SetupKey(keyTextBox.Text);
-
+            areKeysSetup = true;
             PBoxWindow keyWindow = new PBoxWindow(keyTextBox.Text);
             keyWindow.Show();
         }
@@ -52,7 +54,10 @@ namespace BlowFish_Cypher_App
         {
             if(keyTextBox.Text != "")
             {
-                blowFish.SetupKey(keyTextBox.Text);
+                if(areKeysSetup == false)
+                {
+                    blowFish.SetupKey(keyTextBox.Text);
+                }
                 EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(plainTextBox.Text, true);
                 encrpyt.Show();
             }
@@ -62,7 +67,10 @@ namespace BlowFish_Cypher_App
         {
             if (keyTextBox.Text != "")
             {
-                blowFish.SetupKey(keyTextBox.Text);
+                if (areKeysSetup == false)
+                {
+                    blowFish.SetupKey(keyTextBox.Text);
+                }
                 EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(cipherTextBox.Text, false);
                 encrpyt.Show();
             }

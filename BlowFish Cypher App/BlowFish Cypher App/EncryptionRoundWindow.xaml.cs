@@ -23,9 +23,9 @@ namespace BlowFish_Cypher_App
 
         static bool stopSkipping = false;
         static bool isEncrypt;
-        int i = 0;
-        int j = 0;
-        static int step = 1;
+        int i;
+        int j;
+        static int step;
         static string plainText;
         static string currentHex;
         static string fullPlaintextHex;
@@ -34,22 +34,34 @@ namespace BlowFish_Cypher_App
         public EncryptionRoundWindow(string _plainText, bool _isEncrypt)
         {
             InitializeComponent();
+            j = 0;
+            step = 1;
             isEncrypt = _isEncrypt;
             plainText = _plainText;
-
             plainTextLabel.Content += _plainText;
-            var plainTextBinary = BlowFish.ConvertStringToBinary(plainText);
-            var newPlainTextBinary = BlowFish.PadPlainText(plainTextBinary);
 
-            if (newPlainTextBinary != plainTextBinary)
+            if (_isEncrypt == false)
             {
-                plainTextLabel.Content = "Padded Plaintext: " + BlowFish.ConvertBinaryToString(newPlainTextBinary);
+                i = 17;
+                fullPlaintextHex = plainText;
+
+            } else
+            {
+                i = 0;
+                                
+                var plainTextBinary = BlowFish.ConvertStringToBinary(plainText);
+                var newPlainTextBinary = BlowFish.PadPlainText(plainTextBinary);
+
+                if (newPlainTextBinary != plainTextBinary)
+                {
+                    plainTextLabel.Content = "Padded Plaintext: " + BlowFish.ConvertBinaryToString(newPlainTextBinary);
+                }
+                plainTextBinaryLabel.Content += newPlainTextBinary;
+
+                fullPlaintextHex = BlowFish.ConvertBinaryStringToHexString(newPlainTextBinary);
+                plainTextHexLabel.Content += fullPlaintextHex;
             }
-
-            plainTextBinaryLabel.Content += newPlainTextBinary;
-
-            fullPlaintextHex = BlowFish.ConvertBinaryStringToHexString(newPlainTextBinary);
-            plainTextHexLabel.Content += fullPlaintextHex;
+            
             nextHexSection();
         }
 
@@ -59,8 +71,15 @@ namespace BlowFish_Cypher_App
             {
                 currentHex = fullPlaintextHex.Substring(j, 16);
                 currentPlainTextHexLabel.Content = "Current Hex: " + currentHex;
-                j += 16;
-                i = 0;
+                j += 16; 
+                if (isEncrypt == false)
+                {
+                    i = 17;
+                }
+                else
+                {
+                    i = 0;
+                }
                 step = 0;
                 Round(i, currentHex, step);
             } 
@@ -69,10 +88,10 @@ namespace BlowFish_Cypher_App
         private void Round(int round, string text, int step)
         {
             //step 0
-            if(step == 0)
+            if(step == 0 || step == 17)
             {
                 resetAllLabels();
-                roundLabel.Content = "Round " + (round + 1);
+                roundLabel.Content = "Round " + round;
                 var left = text.Substring(0, 8);
                 inputLeftHalfLabel.Content = left;
                 var right = text.Substring(8, 8);
@@ -178,10 +197,16 @@ namespace BlowFish_Cypher_App
         private void nextButton_Click(object sender, RoutedEventArgs e)
         {         
             //if we have reached the end of one round
-            if (step >= 11 && i <= 15)
+            if (step >= 11 && i <= 15 && isEncrypt == true || step >= 11 && i > 1 && isEncrypt == false)
             {
-                i++;
-                if (i > 15)
+                if (isEncrypt)
+                {
+                    i++;
+                } else
+                {
+                    i--;
+                }
+                if (i > 15 && isEncrypt == true || i < 2 && isEncrypt == false)
                 {
                     // postprocessing 
                     // output whitening
@@ -209,6 +234,7 @@ namespace BlowFish_Cypher_App
                     else
                     {
                         // encryption is done
+                        cipherText = "";
                         nextButton.IsEnabled = false;
                         skipButton.IsEnabled = false;
                         skipToEndButton.IsEnabled = false;
@@ -223,7 +249,7 @@ namespace BlowFish_Cypher_App
                 }
                
             } 
-            else if (i <= 15)
+            else if (i <= 15 && isEncrypt || i >=1 && isEncrypt == false)
             {
                 Round(i, currentHex, step);
                 step++; 

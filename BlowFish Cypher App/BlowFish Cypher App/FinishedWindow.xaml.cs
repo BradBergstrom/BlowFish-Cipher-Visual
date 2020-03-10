@@ -37,24 +37,28 @@ namespace BlowFish_Cypher_App
             var left = currentHex.Substring(8, 8);
             inputRightLabel.Content = left;
 
-            p16TextBlock.Text = BlowFish.P[16];
-            p17TextBlock.Text = BlowFish.P[17];
-
             if (encrypt)
             {
+                p16TextBlock.Text = BlowFish.P[16];
+                p17TextBlock.Text = BlowFish.P[17];
+
                 right = BlowFish.Xor(right, BlowFish.P[16]);
                 left = BlowFish.Xor(left, BlowFish.P[17]);
-                MainWindow.setCipherText(cihperTextBox.Text);
                 cihperTextBox.AppendText(left + right);
+                MainWindow.setCipherText(cihperTextBox.Text);
             }
             else
             {
-                right = BlowFish.Xor(right, BlowFish.P[0]);
-                left = BlowFish.Xor(left, BlowFish.P[1]);
-                MainWindow.setPlainTextText(cihperTextBox.Text);
-                cihperTextBox.AppendText(left + right);
-            }
+                p16label.Content = "P[0]";
+                p17label.Content = "P[1]";
+                p16TextBlock.Text = BlowFish.P[1];
+                p17TextBlock.Text = BlowFish.P[0];
 
+                right = BlowFish.Xor(right, BlowFish.P[1]);
+                left = BlowFish.Xor(left, BlowFish.P[0]);
+                cihperTextBox.AppendText(BlowFish.ConvertHexStringToString(left + right));
+                MainWindow.setPlainTextText(cihperTextBox.Text);
+            }
         }
     }
 }
