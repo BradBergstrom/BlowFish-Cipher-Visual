@@ -40,9 +40,20 @@ namespace BlowFish_Cypher_App
             p16TextBlock.Text = BlowFish.P[16];
             p17TextBlock.Text = BlowFish.P[17];
 
-            right = BlowFish.Xor(right, BlowFish.P[16]);
-            left = BlowFish.Xor(left, BlowFish.P[17]);
-            cihperTextBox.AppendText(left + right);
+            if (encrypt)
+            {
+                right = BlowFish.Xor(right, BlowFish.P[16]);
+                left = BlowFish.Xor(left, BlowFish.P[17]);
+                MainWindow.setCipherText(cihperTextBox.Text);
+                cihperTextBox.AppendText(left + right);
+            }
+            else
+            {
+                right = BlowFish.Xor(right, BlowFish.P[0]);
+                left = BlowFish.Xor(left, BlowFish.P[1]);
+                MainWindow.setPlainTextText(cihperTextBox.Text);
+                cihperTextBox.AppendText(left + right);
+            }
 
         }
     }

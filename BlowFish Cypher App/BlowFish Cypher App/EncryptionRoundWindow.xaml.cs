@@ -22,6 +22,7 @@ namespace BlowFish_Cypher_App
         public static BlowFish blowFish;
 
         static bool stopSkipping = false;
+        static bool isEncrypt;
         int i = 0;
         int j = 0;
         static int step = 1;
@@ -30,9 +31,10 @@ namespace BlowFish_Cypher_App
         static string fullPlaintextHex;
 
         static string cipherText = "";
-        public EncryptionRoundWindow(string _plainText)
+        public EncryptionRoundWindow(string _plainText, bool _isEncrypt)
         {
             InitializeComponent();
+            isEncrypt = _isEncrypt;
             plainText = _plainText;
 
             plainTextLabel.Content += _plainText;
@@ -184,12 +186,20 @@ namespace BlowFish_Cypher_App
                     // postprocessing 
                     // output whitening
                     stopSkipping = true;
-                    FinishedWindow outPutWhitening = new FinishedWindow(currentHex, cipherText, (j >= fullPlaintextHex.Length), true);
+                    FinishedWindow outPutWhitening = new FinishedWindow(currentHex, cipherText, (j >= fullPlaintextHex.Length), isEncrypt);
                     outPutWhitening.Show();
                     var right = currentHex.Substring(0, 8);
                     var left = currentHex.Substring(8, 8);
-                    right = BlowFish.Xor(right, BlowFish.P[16]);
-                    left = BlowFish.Xor(left, BlowFish.P[17]);
+                    if (isEncrypt == true)
+                    {
+                        right = BlowFish.Xor(right, BlowFish.P[16]);
+                        left = BlowFish.Xor(left, BlowFish.P[17]);
+                    } else
+                    {
+                        right = BlowFish.Xor(right, BlowFish.P[0]);
+                        left = BlowFish.Xor(left, BlowFish.P[1]);
+                    }
+                    
                     cipherText += left + right;
 
                     if (j < fullPlaintextHex.Length)

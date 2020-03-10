@@ -15,11 +15,10 @@
         <Label x:Name="plaintextLabel" FontSize="25" Content="Plaintext" HorizontalAlignment="Left" Height="41" Margin="259,83,0,0" VerticalAlignment="Top" Width="330"/>
         <Label x:Name="chipertextLabel" FontSize="25" Content="Ciphertext" HorizontalAlignment="Left" Height="41" Margin="748,83,0,0" VerticalAlignment="Top" Width="331"/>
         <Button x:Name="encryptButton" Content="Encrypt ->" HorizontalAlignment="Left" Height="32" Margin="572,187,0,0" VerticalAlignment="Top" Width="159" Click="encryptButton_Click"/>
-        <Button x:Name="decryptButton" Content="&lt;- Decrypt" HorizontalAlignment="Left" Height="34" Margin="572,239,0,0" VerticalAlignment="Top" Width="159"/>
+        <Button x:Name="decryptButton" Content="&lt;- Decrypt" HorizontalAlignment="Left" Height="34" Margin="572,287,0,0" VerticalAlignment="Top" Width="159" Click="decryptButton_Click"/>
         <Label x:Name="keyLabel" Content="Key:" FontSize="25" HorizontalAlignment="Left" Height="50" Margin="38,83,0,0" VerticalAlignment="Top" Width="58"/>
         <TextBox x:Name="keyTextBox" HorizontalAlignment="Left" FontSize="15" TextAlignment="Left" Height="79" Margin="38,133,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
         <Label x:Name="titleLabel" Content="Blowfish Cipher" FontSize="35" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="57" Margin="0,10,0,0" VerticalAlignment="Top" Width="470"/>
-        <CheckBox x:Name="showProcessCheckBox" Content="Show Process" HorizontalAlignment="Left" Height="32" Margin="577,289,0,0" VerticalAlignment="Top" Width="148"/>
         <Button x:Name="keyButton1" Content="Generate P[] Box" Click="onGeneratePBox" HorizontalAlignment="Left" Height="34" Margin="56,240,0,0" VerticalAlignment="Top" Width="150"/>
 
     </Grid>

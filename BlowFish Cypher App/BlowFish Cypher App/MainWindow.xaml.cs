@@ -21,11 +21,22 @@ namespace BlowFish_Cypher_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow me;
         public static BlowFish blowFish;
+
+        public static void setCipherText(string text)
+        {
+            me.cipherTextBox.Text = text;
+        }
+        public static void setPlainTextText(string text)
+        {
+            me.plainTextBox.Text = text;
+        }
 
         public MainWindow()
         {
             InitializeComponent();
+            me = this;
             blowFish = new BlowFish();
         }
 
@@ -42,7 +53,17 @@ namespace BlowFish_Cypher_App
             if(keyTextBox.Text != "")
             {
                 blowFish.SetupKey(keyTextBox.Text);
-                EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(plainTextBox.Text);
+                EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(plainTextBox.Text, true);
+                encrpyt.Show();
+            }
+        }
+
+        private void decryptButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (keyTextBox.Text != "")
+            {
+                blowFish.SetupKey(keyTextBox.Text);
+                EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(cipherTextBox.Text, false);
                 encrpyt.Show();
             }
         }
