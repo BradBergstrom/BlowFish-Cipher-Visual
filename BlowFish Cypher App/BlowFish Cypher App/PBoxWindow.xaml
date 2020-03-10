@@ -1,0 +1,27 @@
+﻿<Window x:Class="BlowFish_Cypher_App.PBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlowFish_Cypher_App"
+        mc:Ignorable="d"
+        Title="PBoxWindow" Height="528" Width="497" ResizeMode="NoResize">
+    <Grid Height="506" Margin="10,0,10,0">
+        <Image x:Name="image"  Source="F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\XOR-gate.png" Margin="30,-103,55,166"/>
+        <Image x:Name="whiteSquare" Source="F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\white_square.png" Width="100" Margin="126,-6,251,462"/>
+
+        <TextBox x:Name="PboxTextBox_before" Text="" TextWrapping="Wrap" Margin="18,129,371,81"/>
+        <TextBox x:Name="PboxTextBox_after" Text=""  TextWrapping="Wrap" Margin="368,129,16,81"/>
+        <TextBox x:Name="keyTextBox" Text="" TextWrapping="Wrap" Margin="107,24,63,442"/>
+
+        <TextBlock x:Name="XOR_TextBlock" Text=" P[i] ⊕ (i+1)th 32-bits of Key = new P[i]" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center" Margin="0,218,0,153" Width="216"/>
+        <Button x:Name="nextButton" Content="Next" Click="nextButton_Click" Margin="156,389,156,92"/>
+        <Button x:Name="skipButton" Content="Skip to end" Click="skipButton_Click" Margin="156,427,156,53"/>
+        <Button x:Name="finishButton" Content="Return" IsEnabled="False" Click="finishButton_Click" Visibility="Hidden"  Margin="156,389,156,92"/>
+
+        <Label x:Name="label" Visibility="Visible" FontWeight="Black" Content="P Box"  Margin="30,90,323,283"/>
+        <Label x:Name="label_Copy" Content="New P Box" FontWeight="Black" Margin="368,90,-41,266"/>
+        <Label x:Name="label_Copy1" Content="Binary Key" HorizontalAlignment="Left" FontWeight="Black" FontSize="13" Margin="13,25,0,356"/>
+
+    </Grid>
+</Window>

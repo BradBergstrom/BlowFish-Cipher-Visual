@@ -1,0 +1,21 @@
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\bin\Debug\netcoreapp3.1\BlowFish Cypher App.exe
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\bin\Debug\netcoreapp3.1\BlowFish Cypher App.deps.json
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\bin\Debug\netcoreapp3.1\BlowFish Cypher App.runtimeconfig.json
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\bin\Debug\netcoreapp3.1\BlowFish Cypher App.runtimeconfig.dev.json
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\bin\Debug\netcoreapp3.1\BlowFish Cypher App.dll
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\bin\Debug\netcoreapp3.1\BlowFish Cypher App.pdb
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App.csprojAssemblyReference.cache
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\App.g.cs
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App_MarkupCompile.cache
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App_MarkupCompile.lref
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\MainWindow.baml
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App.g.resources
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App.AssemblyInfoInputs.cache
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App.AssemblyInfo.cs
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App.dll
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\BlowFish Cypher App.pdb
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\PBoxWindow.g.cs
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\PBoxWindow.baml
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\EncryptionRoundWindow.g.cs
+F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\EncryptionRoundWindow.baml
