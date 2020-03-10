@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="EncryptionRoundWindow" Height="909" Width="1376">
     <Grid Height="846" Margin="0,0,48,0">
-        <Image x:Name="image" Source="F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\BlowFish Diagram V5.png"  HorizontalAlignment="Center" Height="707" Margin="0,28,0,0" VerticalAlignment="Top" Width="1053"/>
+        <Image x:Name="image" Source="F:\Code\Senior Project\Project\BlowFish-Cipher-Visual\BlowFish Cypher App\BlowFish Cypher App\BlowFish Diagram V5.png"  HorizontalAlignment="Center" Height="707" Margin="0,28,0,0" VerticalAlignment="Top" Width="1053"/>
 
         <Label x:Name="roundLabel" Content="Round 1" FontSize="32" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Height="84" Width="153"/>
         <Button x:Name="skipButton" Content="Skip to Round End" FontSize="25" HorizontalAlignment="Left" Margin="220,760,0,0" VerticalAlignment="Top" Height="54" Width="235" Click="skipButton_Click"/>

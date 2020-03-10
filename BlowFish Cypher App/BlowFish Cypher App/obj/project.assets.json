@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Code\\Cryptography\\BlowFish Cypher App\\BlowFish Cypher App\\BlowFish Cypher App.csproj",
+      "projectUniqueName": "F:\\Code\\Senior Project\\Project\\BlowFish-Cipher-Visual\\BlowFish Cypher App\\BlowFish Cypher App\\BlowFish Cypher App.csproj",
       "projectName": "BlowFish Cypher App",
-      "projectPath": "F:\\Code\\Cryptography\\BlowFish Cypher App\\BlowFish Cypher App\\BlowFish Cypher App.csproj",
+      "projectPath": "F:\\Code\\Senior Project\\Project\\BlowFish-Cipher-Visual\\BlowFish Cypher App\\BlowFish Cypher App\\BlowFish Cypher App.csproj",
       "packagesPath": "C:\\Users\\Brad\\.nuget\\packages\\",
-      "outputPath": "F:\\Code\\Cryptography\\BlowFish Cypher App\\BlowFish Cypher App\\obj\\",
+      "outputPath": "F:\\Code\\Senior Project\\Project\\BlowFish-Cipher-Visual\\BlowFish Cypher App\\BlowFish Cypher App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
