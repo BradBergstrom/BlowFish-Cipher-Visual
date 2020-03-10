@@ -57,9 +57,17 @@ namespace BlowFish_Cypher_App
                 if(areKeysSetup == false)
                 {
                     blowFish.SetupKey(keyTextBox.Text);
+                    areKeysSetup = true;
                 }
-                EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(plainTextBox.Text, true);
-                encrpyt.Show();
+                if (showProcessCheckBox.IsChecked == true)
+                {
+                    EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(plainTextBox.Text, true);
+                    encrpyt.Show();
+                }
+                else
+                {
+                    setCipherText(blowFish.Encrypt(plainTextBox.Text));
+                }
             }
         }
 
@@ -70,9 +78,16 @@ namespace BlowFish_Cypher_App
                 if (areKeysSetup == false)
                 {
                     blowFish.SetupKey(keyTextBox.Text);
+                    areKeysSetup = true;
                 }
-                EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(cipherTextBox.Text, false);
-                encrpyt.Show();
+                if(showProcessCheckBox.IsChecked == true)
+                {
+                    EncryptionRoundWindow encrpyt = new EncryptionRoundWindow(cipherTextBox.Text, false);
+                    encrpyt.Show();
+                } else
+                {
+                    setPlainTextText(blowFish.Decrypt(cipherTextBox.Text));
+                }
             }
         }
     }

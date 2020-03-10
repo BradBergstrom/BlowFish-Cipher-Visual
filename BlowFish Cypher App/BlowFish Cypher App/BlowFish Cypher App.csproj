@@ -8,7 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BlowFish Diagram part 2.png" />
+    <None Remove="BlowFish Diagram V5.png" />
+    <None Remove="white_square.png" />
+    <None Remove="XOR-gate.png" />
     <None Remove="XOR_gate.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BlowFish Diagram part 2.png" />
+    <Resource Include="BlowFish Diagram V5.png" />
+    <Resource Include="white_square.png" />
+    <Resource Include="XOR-gate.png" />
   </ItemGroup>
 
 </Project>

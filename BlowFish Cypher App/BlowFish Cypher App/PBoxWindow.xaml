@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="PBoxWindow" Height="528" Width="497" ResizeMode="NoResize">
     <Grid Height="506" Margin="10,0,10,0">
-        <Image x:Name="image"  Source="F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\XOR-gate.png" Margin="30,-103,55,166"/>
-        <Image x:Name="whiteSquare" Source="F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\white_square.png" Width="100" Margin="126,-6,251,462"/>
+        <Image x:Name="image"  Source="XOR-gate.png" Margin="30,-103,55,166"/>
+        <Image x:Name="whiteSquare" Source="white_square.png" Width="100" Margin="126,-6,251,462"/>
 
         <TextBox x:Name="PboxTextBox_before" Text="" TextWrapping="Wrap" Margin="18,129,371,81"/>
         <TextBox x:Name="PboxTextBox_after" Text=""  TextWrapping="Wrap" Margin="368,129,16,81"/>

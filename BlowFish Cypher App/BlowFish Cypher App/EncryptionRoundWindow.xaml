@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlowFish_Cypher_App"
         mc:Ignorable="d"
-        Title="EncryptionRoundWindow" Height="909" Width="1376">
+        Title="EncryptionRoundWindow" Height="909" Width="1376" ResizeMode="NoResize">
     <Grid Height="846" Margin="0,0,48,0">
-        <Image x:Name="image" Source="F:\Code\Senior Project\Project\BlowFish-Cipher-Visual\BlowFish Cypher App\BlowFish Cypher App\BlowFish Diagram V5.png"  HorizontalAlignment="Center" Height="707" Margin="0,28,0,0" VerticalAlignment="Top" Width="1053"/>
+        <Image x:Name="image" Source="BlowFish Diagram V5.png"  HorizontalAlignment="Center" Height="707" Margin="0,28,0,0" VerticalAlignment="Top" Width="1053"/>
 
         <Label x:Name="roundLabel" Content="Round 1" FontSize="32" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Height="84" Width="153"/>
         <Button x:Name="skipButton" Content="Skip to Round End" FontSize="25" HorizontalAlignment="Left" Margin="220,760,0,0" VerticalAlignment="Top" Height="54" Width="235" Click="skipButton_Click"/>
@@ -15,7 +15,7 @@
         <Button x:Name="skipToEndButton" Content="Skip to End" FontSize="25" HorizontalAlignment="Left" Margin="860,760,0,0" VerticalAlignment="Top" Height="54" Width="236" Click="skipToEndButton_Click"/>
         <Label x:Name="inputLeftHalfLabel" Content="left Label" HorizontalAlignment="Left" Margin="506,63,0,0" VerticalAlignment="Top" Height="36" Width="196"/>
         <Label x:Name="inputRightHalfLabel" Content="right Label" HorizontalAlignment="Left" Margin="702,63,0,0" VerticalAlignment="Top" Height="36" Width="196"/>
-        <Label x:Name="pboxLabel" Content="P Box" HorizontalAlignment="Left" Margin="352,124,0,0" VerticalAlignment="Top" Height="50" Width="134"/>
+        <Label x:Name="pboxLabel" Content="P Box" HorizontalAlignment="Left" Margin="343,124,0,0" VerticalAlignment="Top" Height="50" Width="134"/>
         <Label x:Name="functionInputlabel" Content="functionInputlabel" HorizontalAlignment="Left" Margin="374,236,0,0" VerticalAlignment="Top" Width="112"/>
         <Label x:Name="s0Inputlabel" Content="Label" HorizontalAlignment="Left" Margin="220,362,0,0" VerticalAlignment="Top" Width="98"/>
         <Label x:Name="s1Inputlabel" Content="Label" HorizontalAlignment="Left" Margin="220,406,0,0" VerticalAlignment="Top" Width="98"/>
