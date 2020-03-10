@@ -12,7 +12,7 @@
         <Label x:Name="roundLabel" Content="Round 1" FontSize="32" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Height="84" Width="153"/>
         <Button x:Name="skipButton" Content="Skip to Round End" FontSize="25" HorizontalAlignment="Left" Margin="220,760,0,0" VerticalAlignment="Top" Height="54" Width="235" Click="skipButton_Click"/>
         <Button x:Name="nextButton" Content="Next Step" FontSize="25" HorizontalAlignment="Left" Margin="549,760,0,0" VerticalAlignment="Top" Height="54" Width="236" Click="nextButton_Click"/>
-        <Button x:Name="skipToEndButton" Content="Skip to End" FontSize="25" HorizontalAlignment="Left" Margin="860,760,0,0" VerticalAlignment="Top" Height="54" Width="236"/>
+        <Button x:Name="skipToEndButton" Content="Skip to End" FontSize="25" HorizontalAlignment="Left" Margin="860,760,0,0" VerticalAlignment="Top" Height="54" Width="236" Click="skipToEndButton_Click"/>
         <Label x:Name="inputLeftHalfLabel" Content="left Label" HorizontalAlignment="Left" Margin="506,63,0,0" VerticalAlignment="Top" Height="36" Width="196"/>
         <Label x:Name="inputRightHalfLabel" Content="right Label" HorizontalAlignment="Left" Margin="702,63,0,0" VerticalAlignment="Top" Height="36" Width="196"/>
         <Label x:Name="pboxLabel" Content="P Box" HorizontalAlignment="Left" Margin="352,124,0,0" VerticalAlignment="Top" Height="50" Width="134"/>

@@ -21,6 +21,7 @@ namespace BlowFish_Cypher_App
     {
         public static BlowFish blowFish;
 
+        static bool stopSkipping = false;
         int i = 0;
         int j = 0;
         static int step = 1;
@@ -173,9 +174,7 @@ namespace BlowFish_Cypher_App
         }
 
         private void nextButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-
+        {         
             //if we have reached the end of one round
             if (step >= 11 && i <= 15)
             {
@@ -184,6 +183,9 @@ namespace BlowFish_Cypher_App
                 {
                     // postprocessing 
                     // output whitening
+                    stopSkipping = true;
+                    FinishedWindow outPutWhitening = new FinishedWindow(currentHex, cipherText, (j >= fullPlaintextHex.Length), true);
+                    outPutWhitening.Show();
                     var right = currentHex.Substring(0, 8);
                     var left = currentHex.Substring(8, 8);
                     right = BlowFish.Xor(right, BlowFish.P[16]);
@@ -197,10 +199,9 @@ namespace BlowFish_Cypher_App
                     else
                     {
                         // encryption is done
-                        var dper = cipherText;
                         nextButton.IsEnabled = false;
                         skipButton.IsEnabled = false;
-
+                        skipToEndButton.IsEnabled = false;
                     }
                 } else
                 {
@@ -226,6 +227,14 @@ namespace BlowFish_Cypher_App
             Round(i, currentHex, step);
             skipButton.IsEnabled = false;
         }
+        private void skipToEndButton_Click(object sender, RoutedEventArgs e)
+        {
+            while(stopSkipping == false)
+            {
+                nextButton_Click(sender, e);
+            }
+            stopSkipping = false;
+        }
         private void resetAllLabels()
         {
             functionInputlabel.Content = "";
@@ -244,6 +253,7 @@ namespace BlowFish_Cypher_App
             nextRoundRightLabel.Content = "";
         }
 
+        
     }
 
    

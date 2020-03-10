@@ -6,20 +6,22 @@
         xmlns:local="clr-namespace:BlowFish_Cypher_App"
         mc:Ignorable="d"
         Title="FinishedWindow" Height="642" Width="800">
-    <Grid Height="408">
+    <Grid Height="824">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="263*"/>
             <ColumnDefinition Width="537*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" Source="F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\BlowFish Diagram part 2.png" HorizontalAlignment="Left" Margin="92,-106,0,-54" Width="939" Grid.ColumnSpan="2"/>
+        <Image x:Name="image" Source="F:\Code\Senior Project\Project\BlowFish-Cipher-Visual\BlowFish Cypher App\BlowFish Cypher App\BlowFish Diagram part 2.png" HorizontalAlignment="Left" Margin="112,40,0,166" Width="577" Grid.ColumnSpan="2"/>
 
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="226,261,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="348" Height="132" Grid.ColumnSpan="2"/>
-        <Label x:Name="label" Content="Answer:" HorizontalAlignment="Left" Margin="226,231,0,0" VerticalAlignment="Top" Height="25" RenderTransformOrigin="0.5,0.5" Width="132" Grid.ColumnSpan="2"></Label>
-        <Label x:Name="label1" Content="P[17]" FontSize="25" HorizontalAlignment="Left" Margin="371,-32,0,0" VerticalAlignment="Top" Height="43" Width="69" Grid.Column="1"/>
-        <Label x:Name="label1_Copy" Content="P[16]" FontSize="25" HorizontalAlignment="Center" Margin="0,-42,0,0" VerticalAlignment="Top" Height="43" Width="69"/>
-        <TextBlock x:Name="p16TextBlock" FontSize="15" Grid.Column="1" HorizontalAlignment="Left" Margin="371,33,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="156"/>
-        <TextBlock x:Name="p17TextBlock" FontSize="15" HorizontalAlignment="Left" Margin="97,33,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="156"/>
-        <TextBox x:Name="textBox1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="204,-95,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="cihperTextBox" HorizontalAlignment="Left" Margin="234,461,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="140" Grid.ColumnSpan="2"/>
+        <Label x:Name="finLabel" Content="Answer so far:" FontSize="25" HorizontalAlignment="Left" Margin="143,410,0,0" VerticalAlignment="Top" Height="46" RenderTransformOrigin="0.5,0.5" Width="238" Grid.ColumnSpan="2"></Label>
+        <Label x:Name="label1" Content="P[17]" FontSize="25" HorizontalAlignment="Left" Margin="354,146,0,0" VerticalAlignment="Top" Height="46" Width="72" Grid.Column="1"/>
+        <Label x:Name="label1_Copy" Content="P[16]" FontSize="25" HorizontalAlignment="Left" Margin="118,146,0,0" VerticalAlignment="Top" Height="50" Width="70"/>
+        <TextBlock x:Name="p16TextBlock" FontSize="15" Grid.Column="1" HorizontalAlignment="Left" Margin="363,215,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="96"/>
+        <TextBlock x:Name="p17TextBlock" FontSize="15" HorizontalAlignment="Left" Margin="118,216,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="96"/>
+        <Label x:Name="inputLeftLabel" Content="Label" HorizontalAlignment="Left" Margin="189,90,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="204" Height="25"/>
+        <Label x:Name="inputRightLabel" Content="Label" HorizontalAlignment="Left" Margin="135,90,0,0" VerticalAlignment="Top" Width="197" Grid.Column="1" Height="25"/>
+        <Label x:Name="label" Content="Output Whitening" FontSize="35" HorizontalAlignment="Left" Margin="262,17,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="305" Height="61"/>
 
     </Grid>
 </Window>

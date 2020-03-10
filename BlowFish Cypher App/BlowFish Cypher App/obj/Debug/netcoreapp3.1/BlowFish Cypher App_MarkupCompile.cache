@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\
+F:\Code\Senior Project\Project\BlowFish-Cipher-Visual\BlowFish Cypher App\BlowFish Cypher App\obj\Debug\netcoreapp3.1\
 BlowFish_Cypher_App
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-F:\Code\Cryptography\BlowFish Cypher App\BlowFish Cypher App\App.xaml
-3193283265
+F:\Code\Senior Project\Project\BlowFish-Cipher-Visual\BlowFish Cypher App\BlowFish Cypher App\App.xaml
+42037760383
 
-678520436
+7-474681584
 1921654412462
-EncryptionRoundWindow.xaml;MainWindow.xaml;PBoxWindow.xaml;
+EncryptionRoundWindow.xaml;FinishedWindow.xaml;MainWindow.xaml;PBoxWindow.xaml;
 
 False
 
